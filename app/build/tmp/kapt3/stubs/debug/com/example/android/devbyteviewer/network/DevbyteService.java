@@ -6,7 +6,7 @@ import java.lang.System;
 public abstract interface DevbyteService {
     
     @org.jetbrains.annotations.Nullable()
-    @retrofit2.http.GET(value = "devbytes")
+    @retrofit2.http.GET(value = "devbytes.json")
     public abstract java.lang.Object getPlaylist(@org.jetbrains.annotations.NotNull()
     kotlin.coroutines.Continuation<? super com.example.android.devbyteviewer.network.NetworkVideoContainer> p0);
 }

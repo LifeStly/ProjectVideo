@@ -9,7 +9,7 @@ import retrofit2.http.GET
 
 //ใช้ ratroitfit เพื่อดึงข้อมูลรายการ playlist ไปไว้ใน devbytes
 interface DevbyteService {
-    @GET("devbytes")
+    @GET("devbytes.json")
     suspend fun getPlaylist(): NetworkVideoContainer
 }
 
@@ -18,7 +18,7 @@ object DevByteNetwork {
 
     // ตั้ง path url เพื่อให้รูว่าจะดึงข้อมูล json มาจากที่ไหน
     private val retrofit = Retrofit.Builder()
-            .baseUrl("https://android-kotlin-fun-mars-server.appspot.com/")
+            .baseUrl("https://devbytes.udacity.com/")
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
 
