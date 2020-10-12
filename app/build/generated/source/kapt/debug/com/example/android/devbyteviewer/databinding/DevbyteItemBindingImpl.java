@@ -14,13 +14,13 @@ public class DevbyteItemBindingImpl extends DevbyteItemBinding implements com.ex
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.left_well, 5);
-        sViewsWithIds.put(R.id.right_well, 6);
+        sViewsWithIds.put(R.id.right_well, 5);
+        sViewsWithIds.put(R.id.left_well, 6);
         sViewsWithIds.put(R.id.play_icon, 7);
     }
     // views
     @NonNull
-    private final com.google.android.material.card.MaterialCardView mboundView0;
+    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback1;
@@ -35,15 +35,15 @@ public class DevbyteItemBindingImpl extends DevbyteItemBinding implements com.ex
         super(bindingComponent, root, 0
             , (android.view.View) bindings[4]
             , (android.widget.TextView) bindings[2]
-            , (androidx.constraintlayout.widget.Guideline) bindings[5]
-            , (android.widget.ImageView) bindings[7]
             , (androidx.constraintlayout.widget.Guideline) bindings[6]
+            , (android.widget.ImageView) bindings[7]
+            , (androidx.constraintlayout.widget.Guideline) bindings[5]
             , (android.widget.TextView) bindings[1]
             , (android.widget.ImageView) bindings[3]
             );
         this.clickableOverlay.setTag(null);
         this.description.setTag(null);
-        this.mboundView0 = (com.google.android.material.card.MaterialCardView) bindings[0];
+        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.title.setTag(null);
         this.videoThumbnail.setTag(null);

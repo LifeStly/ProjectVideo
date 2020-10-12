@@ -32,6 +32,10 @@
         "source": "C:\\Users\\MickyMouse\\AndroidStudioProjects\\ProjectVideo\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\MickyMouse\\AndroidStudioProjects\\ProjectVideo\\app\\build\\intermediates\\res\\merged\\debug\\font_baloo_thambi.xml.flat",
+        "source": "C:\\Users\\MickyMouse\\AndroidStudioProjects\\ProjectVideo\\app\\src\\main\\res\\font\\baloo_thambi.xml"
+    },
+    {
         "merged": "C:\\Users\\MickyMouse\\AndroidStudioProjects\\ProjectVideo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\MickyMouse\\AndroidStudioProjects\\ProjectVideo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
