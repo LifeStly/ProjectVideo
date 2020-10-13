@@ -17,8 +17,6 @@ public class FragmentDevByteBindingImpl extends FragmentDevByteBinding  {
         sViewsWithIds.put(R.id.recycler_view, 2);
     }
     // views
-    @NonNull
-    private final android.widget.FrameLayout mboundView0;
     // variables
     // values
     // listeners
@@ -29,12 +27,12 @@ public class FragmentDevByteBindingImpl extends FragmentDevByteBinding  {
     }
     private FragmentDevByteBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
+            , (androidx.drawerlayout.widget.DrawerLayout) bindings[0]
             , (android.widget.ProgressBar) bindings[1]
             , (androidx.recyclerview.widget.RecyclerView) bindings[2]
             );
+        this.drawerLayout.setTag(null);
         this.loadingSpinner.setTag(null);
-        this.mboundView0 = (android.widget.FrameLayout) bindings[0];
-        this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();

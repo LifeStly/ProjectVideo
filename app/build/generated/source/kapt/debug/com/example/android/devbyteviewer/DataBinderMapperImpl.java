@@ -6,6 +6,7 @@ import android.view.View;
 import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
+import com.example.android.devbyteviewer.databinding.ActivityDevByteViewerBindingImpl;
 import com.example.android.devbyteviewer.databinding.DevbyteItemBindingImpl;
 import com.example.android.devbyteviewer.databinding.FragmentDevByteBindingImpl;
 import java.lang.IllegalArgumentException;
@@ -19,13 +20,16 @@ import java.util.HashMap;
 import java.util.List;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
-  private static final int LAYOUT_DEVBYTEITEM = 1;
+  private static final int LAYOUT_ACTIVITYDEVBYTEVIEWER = 1;
 
-  private static final int LAYOUT_FRAGMENTDEVBYTE = 2;
+  private static final int LAYOUT_DEVBYTEITEM = 2;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(2);
+  private static final int LAYOUT_FRAGMENTDEVBYTE = 3;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(3);
 
   static {
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.android.devbyteviewer.R.layout.activity_dev_byte_viewer, LAYOUT_ACTIVITYDEVBYTEVIEWER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.android.devbyteviewer.R.layout.devbyte_item, LAYOUT_DEVBYTEITEM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.android.devbyteviewer.R.layout.fragment_dev_byte, LAYOUT_FRAGMENTDEVBYTE);
   }
@@ -39,6 +43,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         throw new RuntimeException("view must have a tag");
       }
       switch(localizedLayoutId) {
+        case  LAYOUT_ACTIVITYDEVBYTEVIEWER: {
+          if ("layout/activity_dev_byte_viewer_0".equals(tag)) {
+            return new ActivityDevByteViewerBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_dev_byte_viewer is invalid. Received: " + tag);
+        }
         case  LAYOUT_DEVBYTEITEM: {
           if ("layout/devbyte_item_0".equals(tag)) {
             return new DevbyteItemBindingImpl(component, view);
@@ -107,9 +117,10 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(2);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(3);
 
     static {
+      sKeys.put("layout/activity_dev_byte_viewer_0", com.example.android.devbyteviewer.R.layout.activity_dev_byte_viewer);
       sKeys.put("layout/devbyte_item_0", com.example.android.devbyteviewer.R.layout.devbyte_item);
       sKeys.put("layout/fragment_dev_byte_0", com.example.android.devbyteviewer.R.layout.fragment_dev_byte);
     }

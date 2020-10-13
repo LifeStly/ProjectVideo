@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.android.devbyteviewer.R;
 import com.example.android.devbyteviewer.viewmodels.DevByteViewModel;
@@ -17,6 +18,9 @@ import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentDevByteBinding extends ViewDataBinding {
+  @NonNull
+  public final DrawerLayout drawerLayout;
+
   @NonNull
   public final ProgressBar loadingSpinner;
 
@@ -27,8 +31,9 @@ public abstract class FragmentDevByteBinding extends ViewDataBinding {
   protected DevByteViewModel mViewModel;
 
   protected FragmentDevByteBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ProgressBar loadingSpinner, RecyclerView recyclerView) {
+      DrawerLayout drawerLayout, ProgressBar loadingSpinner, RecyclerView recyclerView) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.drawerLayout = drawerLayout;
     this.loadingSpinner = loadingSpinner;
     this.recyclerView = recyclerView;
   }

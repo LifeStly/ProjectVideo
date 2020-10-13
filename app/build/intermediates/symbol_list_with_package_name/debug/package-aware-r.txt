@@ -1160,7 +1160,9 @@ id action_bar_subtitle
 id action_bar_title
 id action_container
 id action_context_bar
+id action_devByte_to_homeFragment
 id action_divider
+id action_homeFragment_to_devByte
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -1213,6 +1215,7 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id drawerLayout
 id edit_query
 id end
 id end_padder
@@ -1235,6 +1238,7 @@ id group_divider
 id groups
 id home
 id homeAsUp
+id homeFragment
 id icon
 id icon_group
 id ifRoom
@@ -1261,6 +1265,7 @@ id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
 id my_nav_host_fragment
+id navView
 id nav_controller_view_tag
 id nav_graph
 id navigation_header_container
@@ -1449,6 +1454,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout devbyte_item
 layout fragment_dev_byte
+layout fragment_home
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -1470,6 +1476,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu options_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph

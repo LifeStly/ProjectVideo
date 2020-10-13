@@ -3,15 +3,15 @@ package com.example.android.devbyteviewer.ui
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.devbyteviewer.R
@@ -47,6 +47,8 @@ class DevByteFragment : Fragment() {
 
         binding.viewModel = viewModel
 
+        setHasOptionsMenu(true)
+
         //ถ้า video click จะไปทำงงานที่ videoclick
         viewModelAdapter = DevByteAdapter(VideoClick {
             val packageManager = context?.packageManager ?: return@VideoClick
@@ -73,6 +75,17 @@ class DevByteFragment : Fragment() {
         })
 
         return binding.root //ส่งคืน view หรือก็คือ fragment_dev_byte ในหน้า layout
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.options_menu, menu)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(
+            item,
+            view!!.findNavController()
+        ) || super.onOptionsItemSelected(item)
     }
 
     //หาก NetworkError จะแสดงข้อความแบบ Toast
