@@ -7,7 +7,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 //ถ้าหากมี service มากกว่า 1 ต้องทำเป็น file แยก service
 
-//ใช้ ratroitfit เพื่อดึงข้อมูลรายการ playlist ไปไว้ใน devbytes
+//ใช้ ratroitfit เพื่อดึงข้อมูลรายการ playlist จาก devbytes ซึ้งเป็นพาทใน url
 interface DevbyteService {
     @GET("devbytes.json")
     suspend fun getPlaylist(): NetworkVideoContainer
